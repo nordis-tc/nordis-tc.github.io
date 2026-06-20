@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NORDIS-TC – Tepelné čerpadlá & Energia | Poprad</title>
   <meta name="description" content="NORDIS-TC – tepelné čerpadlá NORDIS, fotovoltika, klimatizácia, rekuperácia. Poprad, Tatry, Liptov, Spiš, Orava." />
+
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+  <link rel="canonical" href="https://nordis-tc.github.io/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <style>
@@ -405,7 +411,86 @@
   .hero-photo { max-height: 320px; object-fit: cover; object-position: center top; }
 }
 
-</style>
+
+    /* ─── FAQ ─── */
+    #faq { background: var(--bg); }
+    .faq-list { max-width: 800px; display: flex; flex-direction: column; gap: 0.75rem; }
+    .faq-item { background: white; border: 1.5px solid var(--border); border-radius: 14px; overflow: hidden; transition: border-color 0.2s; }
+    .faq-item.open { border-color: var(--primary); }
+    .faq-q {
+      width: 100%; background: none; border: none; cursor: pointer;
+      padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: space-between;
+      font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 600;
+      color: var(--primary-dark); text-align: left; gap: 1rem;
+    }
+    .faq-q svg { flex-shrink: 0; transition: transform 0.3s; color: var(--primary); }
+    .faq-item.open .faq-q svg { transform: rotate(180deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.2s; }
+    .faq-a-inner { padding: 0 1.5rem 1.25rem; font-size: 0.95rem; color: var(--text-muted); line-height: 1.75; border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 0; }
+    .faq-item.open .faq-a { max-height: 400px; }
+
+    /* ─── COOKIE BANNER ─── */
+    #cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+      background: var(--primary-dark); color: white;
+      padding: 1.25rem 5%; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+      transform: translateY(100%); transition: transform 0.4s ease;
+    }
+    #cookie-banner.visible { transform: translateY(0); }
+    #cookie-banner p { flex: 1; font-size: 0.88rem; line-height: 1.6; color: rgba(255,255,255,0.85); }
+    #cookie-banner p a { color: var(--green); text-decoration: underline; }
+    .cookie-btns { display: flex; gap: 0.75rem; flex-shrink: 0; }
+    .cookie-accept {
+      background: var(--accent); color: white; border: none; cursor: pointer;
+      padding: 0.6rem 1.4rem; border-radius: 8px; font-weight: 700; font-size: 0.88rem;
+      font-family: 'Montserrat', sans-serif; transition: background 0.2s;
+    }
+    .cookie-accept:hover { background: #c8731f; }
+    .cookie-reject {
+      background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.3);
+      cursor: pointer; padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.88rem;
+      font-family: 'Montserrat', sans-serif; transition: background 0.2s;
+    }
+    .cookie-reject:hover { background: rgba(255,255,255,0.08); }
+    </style>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nordis-tc.github.io/" />
+  <meta property="og:title" content="NORDIS-TC – Tepelné čerpadlá & Energia | Poprad" />
+  <meta property="og:description" content="Tepelné čerpadlá NORDIS, fotovoltika, klimatizácia a rekuperácia. Komplexné riešenia od návrhu po servis v Poprade a okolí. Dotácia Zelená domácnostiam." />
+  <meta property="og:image" content="https://nordis-tc.github.io/hero.png" />
+  <meta property="og:locale" content="sk_SK" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NORDIS-TC – Tepelné čerpadlá & Energia" />
+  <meta name="twitter:description" content="Tepelné čerpadlá, fotovoltika, klimatizácia. Poprad a okolie." />
+  <meta name="twitter:image" content="https://nordis-tc.github.io/hero.png" />
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HVACBusiness",
+    "name": "NORDIS-TC (CETETE s.r.o.)",
+    "url": "https://nordis-tc.github.io",
+    "logo": "https://nordis-tc.github.io/hero.png",
+    "description": "Predaj, inštalácia a servis tepelných čerpadiel NORDIS, fotovoltiky, klimatizácie a rekuperácie v Poprade a okolí.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "L. Svobodu 91",
+      "addressLocality": "Poprad",
+      "postalCode": "058 01",
+      "addressCountry": "SK"
+    },
+    "telephone": "+421903606260",
+    "email": "info@cetete.sk",
+    "areaServed": ["Poprad","Liptov","Orava","Spiš","Tatry","Košice"],
+    "priceRange": "€€",
+    "openingHours": "Mo-Fr 08:00-17:00",
+    "sameAs": ["https://www.facebook.com/cetete.sk","https://www.cetete.sk"]
+  }
+  </script>
 </head>
 <body>
 
@@ -779,7 +864,99 @@
 </section>
 
 <!-- ─── KONTAKT ─── -->
-<section id="contact">
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-label">Máte otázky?</div>
+    <h2>Najčastejšie otázky</h2>
+    <p class="section-intro">Všetko čo potrebujete vedieť o tepelných čerpadlách, fotovoltike a dotáciách.</p>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Aká je záručná doba na tepelné čerpadlo NORDIS?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Na tepelné čerpadlá NORDIS poskytujeme <strong>24-mesačnú záručnú dobu</strong> v súlade so zákonom. Servisnú zmluvu je možné predĺžiť na 3 až 5 rokov. Naši technici vykonajú bezplatnú záručnú opravu v čo najkratšom čase.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Funguje tepelné čerpadlo aj pri veľkých mrazoch pod −20 °C?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Áno. Tepelné čerpadlá NORDIS sú certifikované pre prevádzku <strong>až do −25 °C</strong>. V extrémnych mrazoch môže systém automaticky aktivovať doplnkový elektrický ohrev, čím je zabezpečená nepretržitá prevádzka počas celej zimy.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Koľko ušetrím na energiách oproti plynovému kotlu?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Úspora závisí od aktuálnych cien energií a typu domu, ale <strong>typicky 40–60 % oproti plynu</strong> a 65–75 % oproti elektrickému kúreniu. Tepelné čerpadlo má koeficient výkonu (COP) 3–5, čo znamená, že z 1 kWh elektrickej energie vyrobí 3–5 kWh tepla.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Ako funguje dotácia Zelená domácnostiam a koľko dostanem?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Program <strong>Zelená domácnostiam</strong> je štátny dotačný program Ministerstva hospodárstva SR. Na tepelné čerpadlo môžete získať príspevok <strong>až do výšky 4 000–6 300 €</strong> podľa výkonu zariadenia. My vám s celou administráciou pomôžeme — od podania žiadosti po vyplatenie dotácie.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Je môj dom vhodný pre tepelné čerpadlo?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Tepelné čerpadlo je vhodné pre väčšinu rodinných domov — aj starších. Ideálne sú domy s podlahovým vykurovaním, ale fungujú aj s radiátormi. <strong>Bezplatnú energetickú konzultáciu</strong> a výpočet úspor pre váš dom poskytujeme bez záväzkov.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Ako dlho trvá inštalácia tepelného čerpadla?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Štandardná inštalácia tepelného čerpadla vzduch–voda trvá <strong>1 až 3 pracovné dni</strong>. Závisí od rozsahu práce a stavu existujúceho vykurovacieho systému. Montážna čata pracuje čisto a bez zbytočných prerušení prevádzky domácnosti.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Aká je hlučnosť vonkajšej jednotky?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Moderné tepelné čerpadlá NORDIS dosahujú hlučnosť <strong>40–50 dB</strong>, čo je porovnateľné s tichým rozhovorom. Vonkajšiu jednotku umiestnime na miesto, kde nebude obťažovať susedov ani rodinu.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Ako sa reklamuje porucha alebo vada?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Reklamáciu môžete podať emailom na <strong>info@cetete.sk</strong> alebo telefonicky na <strong>+421 903 606 260</strong>. Na reklamáciu odpovedáme do <strong>30 dní</strong> v súlade so zákonom č. 250/2007 Z.z. Celý reklamačný poriadok nájdete <a href="reklamacie.html">tu</a>.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Vykonávate servis aj pre čerpadlá iných značiek?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Primárne sa špecializujeme na <strong>NORDIS a Buderus</strong>. Servis iných značiek konzultujte s nami — v niektorých prípadoch vieme pomôcť alebo odporučiť certifikovaného technika.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Kedy je najlepší čas na inštaláciu?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Montujeme <strong>celoročne</strong>. Odporúčame jar alebo leto — predídete frontám pred vykurovacou sezónou a stihnete aj vybavenie dotácie. Termíny obsadzujeme dopredu, preto je výhodné rezervovať čo najskôr.</div></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="contact">
   <div class="contact-grid">
     <div class="contact-info">
       <div class="section-label" style="color:var(--accent-light)">Kontakt</div>
@@ -875,6 +1052,17 @@
     <a href="#">Ochrana osobných údajov</a> ·
     <a href="mailto:info@cetete.sk">info@cetete.sk</a>
   </p>
+
+  <div style="border-top:1px solid rgba(255,255,255,0.12);margin-top:2rem;padding-top:1.5rem;text-align:center">
+    <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-bottom:0.75rem">&copy; 2025 NORDIS-TC | CETETE s.r.o. &nbsp;|&nbsp; IČO: [DOPLNIŤ IČO] &nbsp;|&nbsp; DIČ: [DOPLNIŤ DIČ]</p>
+    <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center">
+      <a href="privacy.html" style="color:rgba(255,255,255,0.5);font-size:0.8rem;text-decoration:none">Ochrana osobných údajov</a>
+      <a href="terms.html" style="color:rgba(255,255,255,0.5);font-size:0.8rem;text-decoration:none">Všeobecné obchodné podmienky</a>
+      <a href="reklamacie.html" style="color:rgba(255,255,255,0.5);font-size:0.8rem;text-decoration:none">Reklamačný poriadok</a>
+      <a href="#faq" style="color:rgba(255,255,255,0.5);font-size:0.8rem;text-decoration:none">FAQ</a>
+    </div>
+  </div>
+
 </footer>
 
 <script>
@@ -918,5 +1106,48 @@
     });
   });
 </script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" role="dialog" aria-label="Súhlas s cookies">
+    <p>Táto stránka používa len nevyhnutné technické cookies. Nepoužívame analytické ani marketingové cookies. Viac informácií v <a href="privacy.html">Zásadách ochrany osobných údajov</a>.</p>
+    <div class="cookie-btns">
+      <button class="cookie-accept" onclick="cookieAccept()">Rozumiem</button>
+      <button class="cookie-reject" onclick="cookieAccept()">Odmietnuť</button>
+    </div>
+  </div>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => {
+          el.classList.remove('open');
+          el.querySelector('.faq-q').setAttribute('aria-expanded','false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded','true');
+        }
+      });
+    });
+
+    // Cookie banner
+    function cookieAccept() {
+      document.getElementById('cookie-banner').classList.remove('visible');
+      try { localStorage.setItem('cookie_ok','1'); } catch(e){}
+    }
+    (function(){
+      let ok = false;
+      try { ok = localStorage.getItem('cookie_ok'); } catch(e){}
+      if (!ok) {
+        setTimeout(() => {
+          document.getElementById('cookie-banner').classList.add('visible');
+        }, 1200);
+      }
+    })();
+  </script>
+
 </body>
 </html>
