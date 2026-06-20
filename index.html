@@ -6,27 +6,27 @@
   <title>NORDIS-TC – Tepelné čerpadlá & Energia | Poprad</title>
   <meta name="description" content="NORDIS-TC – tepelné čerpadlá NORDIS, fotovoltika, klimatizácia, rekuperácia. Poprad, Tatry, Liptov, Spiš, Orava." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --primary: #1a4f8a;
-      --primary-dark: #0f3260;
-      --accent: #e8a020;
-      --accent-light: #f5c260;
-      --text: #1c2b3a;
-      --text-muted: #5a6b7a;
-      --bg: #f7f9fc;
+      --primary: #1B7F8C;
+      --primary-dark: #0F2A3F;
+      --accent: #E0892E;
+      --accent-light: #f5a84d;
+      --text: #0F2A3F;
+      --text-muted: #4d6475;
+      --bg: #F4F6F7;
       --white: #ffffff;
-      --border: #dde4ee;
-      --green: #1e8a4a;
+      --border: #cdd9e0;
+      --green: #5DCAA5;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       color: var(--text);
       background: var(--white);
       line-height: 1.6;
@@ -35,9 +35,9 @@
     /* ─── NAV ─── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(255,255,255,0.96);
+      background: rgba(15,42,63,0.97);
       backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
       padding: 0 5%;
       display: flex; align-items: center; justify-content: space-between;
       height: 68px;
@@ -45,7 +45,7 @@
 
     .nav-logo {
       display: flex; align-items: center; gap: 10px;
-      text-decoration: none; color: var(--primary);
+      text-decoration: none; color: white;
     }
     .nav-logo-icon {
       width: 40px; height: 40px;
@@ -55,27 +55,27 @@
     }
     .nav-logo-icon svg { width: 22px; height: 22px; }
     .nav-logo-text { font-weight: 700; font-size: 1.1rem; line-height: 1.1; }
-    .nav-logo-sub { font-size: 0.68rem; color: var(--text-muted); font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; }
+    .nav-logo-sub { font-size: 0.68rem; color: rgba(255,255,255,0.55); font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; }
 
     .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--primary); }
+    .nav-links a { text-decoration: none; color: rgba(255,255,255,0.75); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
 
     .nav-cta {
-      background: var(--primary); color: white;
+      background: var(--accent); color: white;
       padding: 0.5rem 1.2rem; border-radius: 8px;
       text-decoration: none; font-size: 0.875rem; font-weight: 600;
       transition: background 0.2s;
     }
-    .nav-cta:hover { background: var(--primary-dark); }
+    .nav-cta:hover { background: #c8731f; }
 
     .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
-    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--text); margin: 5px 0; transition: 0.3s; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: white; margin: 5px 0; transition: 0.3s; }
 
     /* ─── HERO ─── */
     #hero {
       min-height: 100vh;
-      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #1e6db5 100%);
+      background: linear-gradient(135deg, #071722 0%, #0F2A3F 50%, #163d52 100%);
       display: flex; flex-direction: column; justify-content: center;
       padding: 100px 5% 60px;
       position: relative; overflow: hidden;
@@ -117,7 +117,7 @@
       transition: background 0.2s, transform 0.15s;
       display: inline-flex; align-items: center; gap: 8px;
     }
-    .btn-primary:hover { background: #cf8e18; transform: translateY(-1px); }
+    .btn-primary:hover { background: #c8731f; transform: translateY(-1px); }
 
     .btn-outline {
       background: rgba(255,255,255,0.1); color: white;
@@ -151,7 +151,7 @@
       display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
     }
     .about-visual {
-      background: linear-gradient(135deg, var(--primary) 0%, #1e6db5 100%);
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
       border-radius: 20px; padding: 3rem;
       display: flex; flex-direction: column; gap: 1.5rem;
     }
@@ -173,32 +173,32 @@
       display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;
     }
     .service-card {
-      border: 1.5px solid var(--border); border-radius: 16px;
+      border: 1.5px solid var(--border); border-radius: 20px;
       padding: 2rem; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
       cursor: pointer;
     }
     .service-card:hover {
-      border-color: var(--primary); box-shadow: 0 8px 32px rgba(26,79,138,0.1);
-      transform: translateY(-3px);
+      border-color: var(--primary); box-shadow: 0 14px 40px rgba(27,127,140,0.18);
+      transform: translateY(-6px);
     }
     .service-icon {
-      width: 56px; height: 56px; border-radius: 14px;
+      width: 68px; height: 68px; border-radius: 20px;
       display: flex; align-items: center; justify-content: center;
       margin-bottom: 1.2rem;
     }
-    .service-icon svg { width: 28px; height: 28px; }
-    .service-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.6rem; }
+    .service-icon svg { width: 34px; height: 34px; }
+    .service-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--primary-dark); }
     .service-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
 
-    .icon-blue { background: #e8f0fb; color: var(--primary); }
-    .icon-orange { background: #fff3e0; color: #e08020; }
-    .icon-green { background: #e6f4ec; color: var(--green); }
-    .icon-teal { background: #e0f5f5; color: #0a7a80; }
-    .icon-purple { background: #f0eaff; color: #6b3fa0; }
+    .icon-blue { background: linear-gradient(135deg,#d8f2f5,#b8e8ed); color: #1B7F8C; }
+    .icon-orange { background: linear-gradient(135deg,#fef0da,#fddcaa); color: #E0892E; }
+    .icon-green { background: linear-gradient(135deg,#d8f4e8,#b8ecda); color: #3aaa85; }
+    .icon-teal { background: linear-gradient(135deg,#d0eef1,#a8dfe5); color: #1B7F8C; }
+    .icon-purple { background: linear-gradient(135deg,#d8e4f0,#baced8); color: #0F2A3F; }
 
     /* ─── DOTACIE BANNER ─── */
     .dotacia-banner {
-      background: linear-gradient(135deg, var(--green) 0%, #16703c 100%);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       border-radius: 20px; padding: 3rem;
       display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
       margin-top: 3rem;
@@ -207,7 +207,7 @@
     .dotacia-banner-text h3 { color: white; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.4rem; }
     .dotacia-banner-text p { color: rgba(255,255,255,0.85); font-size: 0.95rem; }
     .dotacia-amount { margin-left: auto; }
-    .dotacia-amount strong { display: block; font-size: 2.2rem; font-weight: 800; color: var(--accent-light); }
+    .dotacia-amount strong { display: block; font-size: 2.2rem; font-weight: 800; color: var(--accent); }
     .dotacia-amount span { font-size: 0.8rem; color: rgba(255,255,255,0.7); }
 
     /* ─── NORDIS PRODUKTY ─── */
@@ -222,7 +222,7 @@
     }
     .product-card:hover { box-shadow: 0 12px 40px rgba(26,79,138,0.12); transform: translateY(-4px); }
     .product-card-header {
-      background: linear-gradient(135deg, var(--primary) 0%, #1e6db5 100%);
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
       padding: 2rem 2rem 1.5rem;
     }
     .product-tag {
@@ -537,14 +537,14 @@
   <div class="services-grid">
     <div class="service-card">
       <div class="service-icon icon-blue">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="16" width="12" height="14" rx="3" fill="currentColor" opacity=".18"/><rect x="4" y="16" width="12" height="14" rx="3" stroke="currentColor" stroke-width="1.8"/><rect x="5.5" y="17.5" width="9" height="5" rx="1.5" stroke="currentColor" stroke-width="1.2" opacity=".5"/><circle cx="10" cy="26" r="1.5" fill="currentColor" opacity=".4"/><path d="M18 22h10M18 22l3.5-3.5M18 22l3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 14s2 1.5 2 4-2 4-2 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".5"/></svg>
       </div>
       <h3>Tepelné čerpadlá</h3>
       <p>Vzduch–voda, vzduch–vzduch, zem–voda, voda–voda. Výber, projekt, montáž a servis. Fungujú až pri –25 °C. Ideálne pre nové domy aj rekonštrukcie.</p>
     </div>
     <div class="service-card">
       <div class="service-icon icon-orange">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="16" width="24" height="12" rx="2" fill="currentColor" opacity=".12" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="16" x2="16" y2="28" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="4" y1="22" x2="28" y2="22" stroke="currentColor" stroke-width="1.2" opacity=".4"/><circle cx="16" cy="9" r="5" fill="currentColor" opacity=".25" stroke="currentColor" stroke-width="1.8"/><path d="M16 1v3M16 15v3M24.24 4.76l-2.12 2.12M9.88 18.12l-2.12 2.12M28 9h-3M7 9H4M24.24 13.24l-2.12-2.12M9.88 4.88L7.76 2.76" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".6"/></svg>
       </div>
       <h3>Fotovoltické systémy</h3>
       <p>Solárne panely pre rodinné domy aj podniky. Vlastná výroba elektriny, batériové úložiská, kombinácia s tepelným čerpadlom pre maximálnu úsporu.</p>
