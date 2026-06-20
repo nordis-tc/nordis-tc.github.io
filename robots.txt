@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /privacy.html
+Disallow: /terms.html
+Disallow: /reklamacie.html
+
+Sitemap: https://nordis-tc.github.io/sitemap.xml
